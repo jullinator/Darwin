@@ -2,8 +2,18 @@ import React ,{createElement as $} from 'react'
 import rn from 'react-native'
 
 export const Touchable = (props)=>
-  $(rn.TouchableOpacity, {props.onPress},
-    $(rn.Text, {}, props.children)
+  $(rn.TouchableOpacity, {
+    onPress: props.onPress,
+    style:{
+      backgroundColor:'steelblue',
+      margin:1
+    }
+  },
+    $(rn.Text, {
+      style:{
+        fontSize: 25
+      }
+    }, props.children)
   )
 
 export const RoundButton = (props) =>
